@@ -3,7 +3,6 @@
 
 #include <vector>
 #include <thread>
-#include <mutex>
 #include <iostream>
 
 class ParallelMergeSort {
@@ -17,4 +16,4 @@ public:
     void recursiveSort(int left, int right);
 };
 
-#endif
+#endif // PARALLELMERGESORT_H

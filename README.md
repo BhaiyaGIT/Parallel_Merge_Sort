@@ -2,7 +2,9 @@
 
 ## Overview
 
-This project presents an implementation of the Merge Sort algorithm utilizing parallel processing in C++. By leveraging multithreading, the sorting process is significantly accelerated, especially for large datasets. The implementation demonstrates the use of thread pools and efficient synchronization mechanisms to achieve optimal performance.
+This project presents an implementation of the Merge Sort algorithm utilizing parallel processing in C++.
+By leveraging multithreading, the sorting process is significantly accelerated, especially for large datasets. 
+The implementation demonstrates the use of thread pools and efficient synchronization mechanisms to achieve optimal performance.
 
 ## Features
 
@@ -20,17 +22,20 @@ The implementation focuses on enhancing the traditional Merge Sort algorithm by 
 
 ### Thread Pool
 
-A thread pool is employed to manage the creation and synchronization of threads efficiently. This approach minimizes the overhead associated with frequent thread creation and destruction, leading to better resource utilization and performance.
+A thread pool is employed to manage the creation and synchronization of threads efficiently.
+This approach minimizes the overhead associated with frequent thread creation and destruction, leading to better resource utilization and performance.
 
 ## Performance Comparison
 
-Benchmark tests were conducted to compare the execution times of the standard Merge Sort and the Parallel Merge Sort implementations. On a MacBook M1 Pro, the standard Merge Sort executed in approximately 25 seconds, while the Parallel Merge Sort completed the same task in about 1 second, demonstrating a significant performance improvement.
+Benchmark tests were conducted to compare the execution times of the standard Merge Sort and the Parallel Merge Sort implementations.
+On a HP Pavilion, Windows 11 (x64), Intel Core i5, 8GB RAM, the standard Merge Sort executed in approximately 21.51 seconds, 
+while the Parallel Merge Sort completed the same task in about 2.62 seconds on 1 Billion elements(1000M), demonstrating a significant performance improvement.
 
 ## Getting Started
 
 ### Prerequisites
 
-- **C++ Compiler**: Ensure you have a C++ compiler that supports C++11 or later.
+- **C++ Compiler**: Ensure you have a C++ compiler that supports C++17 or later.
 - **CMake**: Used for building the project.
 
 ### Installation
@@ -39,7 +44,13 @@ Benchmark tests were conducted to compare the execution times of the standard Me
 
    ```bash
    git clone <repo-url>
-   cd parallelMergeSort/src/app
-   g++ main.cpp -o main
-   ./main
-   ```
+   cd "C:\Users\ritik\OneDrive\Desktop\parallelMergeSort"
+   ./sorttest
+
+OR
+   open powershell 
+   #Run this::
+   cd "C:\Users\ritik\OneDrive\Desktop\parallelMergeSort"
+   g++ -std=c++17 -O2 -pthread main.cpp sorting/mergeSort.cpp sorting/parallelMergeSort.cpp -o sorttest
+   .\sorttest
+
